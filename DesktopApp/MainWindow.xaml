@@ -9,7 +9,7 @@
     <Grid>
         <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
             <StackPanel Orientation="Horizontal">
-                <TextBlock Text="Veuillez sélectionner le fichier XMl à sérialiser : " VerticalAlignment="Center" />
+                <TextBlock Text="Veuillez sélectionner le fichier XML à sérialiser : " VerticalAlignment="Center" />
                 <Button x:Name="btnParcourir" Content="Parcourir" Width="125" Height="25" Background="#FF62CDFF" Foreground="Black" Cursor="Hand" Click="Parcourir_Click" Margin="10 0 0 0" />
             </StackPanel>
             <Button x:Name="btnDeserialisation" Content="Desérialisation" IsEnabled="False" Width="125" Height="25" Background="#FF62CDFF" Foreground="Black" Cursor="Hand" Click="btnDeserialisation_Click" Margin="10" />

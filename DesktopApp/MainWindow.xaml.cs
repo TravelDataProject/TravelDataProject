@@ -167,6 +167,12 @@ namespace DesktopApp
                     btnInsertionMasse.IsEnabled = false;
                     tblockState.Text = "Fichier chargé.";
                 }
+                else
+                {
+                    btnDeserialisation.IsEnabled = false;
+                    btnInsertionMasse.IsEnabled = false;
+                    tblockState.Text = "Veuillez sélectionner un fichier au format XML.";
+                }
             }
         }
     }
