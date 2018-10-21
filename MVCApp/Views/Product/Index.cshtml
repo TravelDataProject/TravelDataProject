@@ -1,0 +1,291 @@
+﻿@model Models.IndexViewModel<Models.ProdElement>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+@Html.ActionLink(" Generer JSON ", "Download", "Product", null, new { @class = "btn btn-success" })
+<br />
+
+<div style="overflow: auto;">
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Items.FirstOrDefault().lang)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Items.FirstOrDefault().web_offer)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Items.FirstOrDefault().stock_quantity)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Items.FirstOrDefault().pre_order)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Items.FirstOrDefault().is_for_sale)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Items.FirstOrDefault().in_stock)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Items.FirstOrDefault().brand)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Items.FirstOrDefault().cat)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Items.FirstOrDefault().pId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Items.FirstOrDefault().price.curr)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Items.FirstOrDefault().price.buynow)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Items.FirstOrDefault().price.rrp)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Items.FirstOrDefault().price.store)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Items.FirstOrDefault().price.basePrice)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Items.FirstOrDefault().text.name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Items.FirstOrDefault().uri.awTrack)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Items.FirstOrDefault().uri.alternateImageTwo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Items.FirstOrDefault().uri.alternateImageThree)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Items.FirstOrDefault().uri.awImage)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Items.FirstOrDefault().uri.awThumb)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Items.FirstOrDefault().uri.mImage)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Items.FirstOrDefault().uri.mLink)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Items.FirstOrDefault().vertical.id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Items.FirstOrDefault().vertical.name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Items.FirstOrDefault().vertical.availability)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Items.FirstOrDefault().vertical.departureDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Items.FirstOrDefault().vertical.destinationCity)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Items.FirstOrDefault().vertical.destinationCountry)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Items.FirstOrDefault().vertical.destinationRegion)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Items.FirstOrDefault().vertical.destinationType)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Items.FirstOrDefault().vertical.duration)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Items.FirstOrDefault().vertical.hotelAddress)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Items.FirstOrDefault().vertical.latitude)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Items.FirstOrDefault().vertical.longitude)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Items.FirstOrDefault().vertical.returnDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Items.FirstOrDefault().vertical.roomType)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Items.FirstOrDefault().vertical.startingFromPrice)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Items.FirstOrDefault().vertical.travelRating)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Items.FirstOrDefault().vertical.travelType)
+            </th>
+        </tr>
+
+        @foreach (var item in Model.Items)
+        {
+            <tr>
+                @*<td>
+                        @Html.CheckBoxFor(modelItem => item.id)
+                    </td>*@
+                <td>
+                    @Html.DisplayFor(modelItem => item.lang)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.web_offer)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.stock_quantity)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.pre_order)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.is_for_sale)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.in_stock)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.brand)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.cat)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.pId)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.price.curr)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.price.buynow)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.price.rrp)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.price.store)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.price.basePrice)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.text.name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.uri.awTrack)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.uri.alternateImageTwo)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.uri.alternateImageThree)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.uri.awImage)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.uri.awThumb)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.uri.mImage)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.uri.mLink)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.vertical.id)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.vertical.name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.vertical.availability)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.vertical.departureDate)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.vertical.destinationCity)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.vertical.destinationCountry)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.vertical.destinationRegion)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.vertical.destinationType)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.vertical.duration)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.vertical.hotelAddress)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.vertical.latitude)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.vertical.longitude)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.vertical.returnDate)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.vertical.roomType)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.vertical.startingFromPrice)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.vertical.travelRating)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.vertical.travelType)
+                </td>
+            </tr>
+        }
+    </table>
+</div>
+<hr />
+<!-- pager -->
+@if (Model.Pager.EndPage > 1)
+{
+    <ul class="pagination">
+        @if (Model.Pager.CurrentPage > 1)
+        {
+            <li>
+                <a href="~/Product/Index">First</a>
+            </li>
+            <li>
+                <a href="~/Product/Index?page=@(Model.Pager.CurrentPage - 1)">Previous</a>
+            </li>
+        }
+
+        @for (var page = Model.Pager.StartPage; page <= Model.Pager.EndPage; page++)
+        {
+            <li class="@(page == Model.Pager.CurrentPage ? "active" : "")">
+                <a href="~/Product/Index?page=@page">@page</a>
+            </li>}
+
+        @if (Model.Pager.CurrentPage < Model.Pager.TotalPages)
+        {
+            <li>
+                <a href="~/Product/Index?page=@(Model.Pager.CurrentPage + 1)">Next</a>
+            </li>
+            <li>
+                <a href="~/Product/Index?page=@(Model.Pager.TotalPages)">Last</a>
+            </li>
+        }
+    </ul>
+}
