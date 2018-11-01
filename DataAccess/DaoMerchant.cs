@@ -53,7 +53,7 @@ namespace DataAccess
             throw new NotImplementedException();
         }
 
-        public IEnumerable<MerchantElement> GetAll()
+        public IEnumerable<MerchantElement> GetAll(int? startIndex, int? endIndex)
         {
             throw new NotImplementedException();
         }

@@ -240,3 +240,4 @@ ModelManifest.xml
 
 # FAKE - F# Make
 .fake/
+/RESTServer/App_Start/WebApiConfig.cs

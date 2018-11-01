@@ -23,6 +23,6 @@ namespace DataAccess
 
         IEnumerable<T> GetByExpression(string expression);
 
-        IEnumerable<T> GetAll();
+        IEnumerable<T> GetAll(int? startIndex, int? endIndex);
     }
 }
