@@ -21,5 +21,6 @@ namespace Models
 
         public double basePrice { get; set; }
 
+
     }
 }
