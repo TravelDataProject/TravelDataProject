@@ -20,5 +20,6 @@ namespace Models
         public double store { get; set; }
 
         public double basePrice { get; set; }
+
     }
 }
